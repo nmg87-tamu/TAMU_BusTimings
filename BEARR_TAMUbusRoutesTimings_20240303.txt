@@ -1,0 +1,44 @@
+TAMUbusRoutesTimings.xlsxCodebook
+
+Sheet 1 - RouteStopsTiming
+
+
+StopID - The stop ID assigned to this route, visible next to the route name on the AggieSpirit Route Map website. 
+
+StopNum - The order in which the bus makes stop, 1 being first until the last stop of the route, when the route repeats, available from the original bus point and line data. 
+
+StopWebName - The name of the route on the AggieSpirit Route Map website, many route names were updated over the summer.
+
+StopOriginName - The name of the route on the source data that was utilized for line and point data, these names are sometimes the same as the StopWebName, but are typically different due to name updated made between this data collection and the collection of the timing data. 
+
+RouteNum - The number (as string) of the route, 01 Bonfire, 03 Yell Practice, 27 Ring Dance, etc. 
+
+RouteName - The name of the route 
+
+RouteStopID - A concatenation of the RouteNum and StopNum with an "_" between them, used a way to perform a join to spatial data and associate x, y coordinates with the spreadsheet. 
+
+Stop1-151 - The time that a stop is made at stop point, varies between stops and routes
+
+
+Sheet 2 - SpaceTimeCubeForm
+
+
+BusTimes - This is the temporal field of the routes, utilize this as the time field in ArcGIS when attempting the STC analysis. If the datatype isn't accepted, create a new field and make it a "time" or "date" datatype and set the calculate the field to equal BusTimes. 
+
+StopClass - What kind of stop is recorded here, Main stops are timed to leave a major point along the route at a specific time whether they arrive early or late. Route stops are only stopped at if a rider requests a stop, or if riders are waiting at the stop location, otherwise they will continue on their route.
+
+Latitude - The Y location of the stop point
+
+Longitude - The X location of the stop point
+
+StopID - The official stop Identification Number assigned by the AggieSpirit Route Map Website next to the Stop Name
+
+RouteNum - The number of the route, such as 27 for Rudder, 01 for Bonfire, etc. 
+
+StopNum - The stops number along the route, begins at one and ends before the route repeats its loop.
+
+StopWebName - The name of the stop as of Spring 2024.
+
+StopOriginName - The name of the stop in Fall 2023 (when data was collected).
+
+RouteStopID - A concatenation of the RouteNum and StopNum with an "_" between them, used a way to perform a join to spatial data and associate x, y coordinates with the spreadsheet after creating the same field in ArcGIS.
